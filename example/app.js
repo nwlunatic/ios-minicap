@@ -62,6 +62,7 @@ wss.on('connection', (ws) => {
   ws.on('close', () => {
     console.info('Lost a client')
     stream.end()
+    stream.destroy()
   })
 })
 
